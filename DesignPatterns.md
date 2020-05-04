@@ -1,0 +1,5 @@
+- Factory Method
+- Abstract Factory
+- Adapter
+- Bridge
+- Chain of 
