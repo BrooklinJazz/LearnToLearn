@@ -68,7 +68,7 @@ module.exports = {Box1, Box2}
   );
 }
 
-const describeConcept = async () => {
+const askQuestion = async () => {
   if (Box1.length === 0) {
     console.warn("You're first box is empty! rewrite me!");
     return
@@ -82,4 +82,4 @@ const describeConcept = async () => {
   await saveBoxes(boxes)
 };
 
-describeConcept();
+askQuestion();
