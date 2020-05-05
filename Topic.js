@@ -1,5 +1,8 @@
 class Topic {
-    constructor(name, katas)
+    constructor(name, katas) {
+        this.name = name
+        this.katas = katas
+    }
 }
 
-module.exports = Topic
+module.exports = {Topic}
