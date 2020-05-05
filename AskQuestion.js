@@ -1,5 +1,6 @@
 const fs = require('fs');
 const DesignPatterns = require("./DesignPatterns")
+const Elixir = require("./DesignPatterns")
 const askQuestion = () => {
   // select question
   // ask for description
