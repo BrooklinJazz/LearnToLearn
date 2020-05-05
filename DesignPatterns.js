@@ -1,5 +1,5 @@
 const FactoryMethod = {
-  name: "Factory Method",
+  name: "Factory Method Pattern",
   katas: [
     "https://www.codewars.com/kata/56c4dcf5dd8e2355bc001f64",
     "https://refactoring.guru/design-patterns/factory-method"

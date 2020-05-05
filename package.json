@@ -16,5 +16,7 @@
     "url": "https://github.com/BrooklinJazz/LearnToLearn/issues"
   },
   "homepage": "https://github.com/BrooklinJazz/LearnToLearn#readme",
-  "dependencies": {}
+  "dependencies": {
+    "node-fetch": "^2.6.0"
+  }
 }
