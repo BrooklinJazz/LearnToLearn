@@ -31,6 +31,8 @@ const sortBoxes = async topic => {
       case "n":
       case "no":
         console.warn("Please do one of the following katas: ", topic.katas)
+        const firstEl = box1.shift()
+        box1.push(firstEl)
         break;
       default:
         console.warn("INVALID INPUT");
