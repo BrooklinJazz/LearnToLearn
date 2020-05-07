@@ -12,3 +12,25 @@
 - immutability
 - input -> output. Cards.create_deck |> Cards.shuffle
 - method? means the method returns a boolean (not enforced, this is just convention)
+- methods are different depending on their inputs so you can have shuffle/0 and shuffle/1
+
+# Lists
+- Enum.shuffle
+- for loops and comprehensions
+```elixir
+for suit <- suits do
+      suit
+    end
+```
+- get every possible combination of list elements
+```
+    for suit <- suits, value <- values do
+      "#{value} of #{suit}"
+    end
+```
+- tuple is like an indexed array where the order specifies some meaning
+  - {hand, cards} = Cards.deal(deck, 5) returns a Tuple with the first element hand, second element cards
+
+# Erlang
+- BEAM Bogdang erlands Abstract Machine -> A VM on which the erlang code gets executed.
+- 
