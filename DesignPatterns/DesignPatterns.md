@@ -48,3 +48,9 @@
 - `Builder`:
   - when piecewise object construction is complicated provide an API for doing it succinctly
   - exercise: https://www.udemy.com/course/design-patterns-javascript/learn/quiz/4631998#overview
+
+- `Factory`:
+  - wholesale object creation
+  - A separate Method: `Factory Method`
+  - That may exist in a separate class `Factory`
+  - can Create a hierarchy of factories with `Abstract Factory`
