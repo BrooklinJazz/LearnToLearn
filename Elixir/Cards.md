@@ -9,3 +9,6 @@
 
 ## functional design patterns
 - OOP tends to have class methods that work on it's local data
+- immutability
+- input -> output. Cards.create_deck |> Cards.shuffle
+- method? means the method returns a boolean (not enforced, this is just convention)
