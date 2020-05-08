@@ -21,4 +21,7 @@ be found at [https://hexdocs.pm/cards](https://hexdocs.pm/cards).
 
 
 # Learning
-iex -S mix
+- iex -S mix
+- Enum
+- Pipe Operator
+- doc testing
