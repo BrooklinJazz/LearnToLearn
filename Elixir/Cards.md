@@ -40,3 +40,10 @@ color = %{primary: "red"}
 iex> colors.primary
 "red"
 ```
+- can use pattern matching to assign variables
+
+
+# Tuples
+- key word lists
+- unlike maps, can have many items with the same key.
+
