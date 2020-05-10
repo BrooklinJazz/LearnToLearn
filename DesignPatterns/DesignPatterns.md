@@ -54,3 +54,12 @@
   - A separate Method: `Factory Method`
   - That may exist in a separate class `Factory`
   - can Create a hierarchy of factories with `Abstract Factory`
+  - Abstract meaning that is has methdods as a "guide" for how to use it to extend other factories
+
+- `Prototype`
+  - An existing (partially or fully constructed) design is a prototype
+  - make a copy (clone) the prototype and customize it
+    - requires deep copy support
+    - make cloning easy via factory
+  - explicit copying becomes difficult given complex class trees
+  - copy through serialization JSON.parse(JSON.stringify(myClassInstance)) // only copies data
