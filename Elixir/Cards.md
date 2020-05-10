@@ -33,4 +33,10 @@ for suit <- suits do
 
 # Erlang
 - BEAM Bogdang erlands Abstract Machine -> A VM on which the erlang code gets executed.
-- 
+
+# Maps
+```iex
+color = %{primary: "red"}
+iex> colors.primary
+"red"
+```
