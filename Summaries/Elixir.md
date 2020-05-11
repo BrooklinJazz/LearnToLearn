@@ -46,3 +46,11 @@
     end
   end
 ```
+- piping
+```
+  def create_hand(size) do
+    Cards.create_deck()
+    |> Cards.shuffle()
+    |> Cards.deal(size)
+  end
+```
