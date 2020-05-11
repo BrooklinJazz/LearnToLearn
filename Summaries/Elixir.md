@@ -7,8 +7,17 @@
 # Types
 - integer
 - string
-- tuples: keyname lists
-- maps: like objects
+- tuples: keyname lists {"el1", "el2"}
+- lists: ["1", "2"]
+  - keyword lists: [{:primary: "red"}, {:secondary: "blue"}]
+- maps: like objects %{key: value}
+  - can use obj syntax map.key
+- atoms :my_atom
+- booleans
+
+- tuples vs lists
+  - Tuples: Faster Accessing & Sizing. Expensive Updating
+  - Lists: Linked Lists - Expensive to Traverse. Prepending = fast. Postpending = slow
 
 # Libs
 - Enum: interact with lists i.e. Enum.shuffle
