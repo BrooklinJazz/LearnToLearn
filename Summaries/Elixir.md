@@ -28,6 +28,7 @@
       "#{value} of #{suit}"
     end
 ```
+- File
 
 # Patterns
 - immutability
@@ -35,3 +36,13 @@
 - Elixir transfers data through the pipe: - input -> output. Cards.create_deck |> Cards.shuffle
 - method? means the method returns a boolean (not enforced, this is just convention)
 - methods are different depending on their inputs so you can have shuffle/0 and shuffle/1
+- pattern matching: {var1, var2} = {"varValue1", "varValue2"}
+- error handling
+```
+  def load(filename) do
+    case File.read(filename) do
+      {:ok, binary} -> :erlang.binary_to_term(binary)
+      {:error, _reason} -> "file #{filename} does not exist"
+    end
+  end
+```
