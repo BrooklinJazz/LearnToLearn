@@ -3,6 +3,20 @@
 - generate a new project `mix new <projectname>`
 - compile module and run in iex `iex -S mix`
 - reload/recompile code in iex using `recompile`
+- generate docs
+  - add ex_doc
+    ```
+  # Run "mix help deps" to learn about dependencies.
+  defp deps do
+    [
+      {:ex_doc, "~> 0.12"}
+    ]
+  end
+    ```
+  - get dependencies `mix deps.get`
+  - generate doc `mix docs`
+  - open doc/index.html in the browser to view docs
+- run tests using `mix test`
 
 # Types
 - integer

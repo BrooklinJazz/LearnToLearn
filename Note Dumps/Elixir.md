@@ -17,6 +17,7 @@
 - method? means the method returns a boolean (not enforced, this is just convention)
 - methods are different depending on their inputs so you can have shuffle/0 and shuffle/1
 - doc testing
+
   ```
     @doc """
   Determines whether a deck contains a given card
@@ -31,7 +32,9 @@
     Enum.member?(deck, card)
   end
   ```
-- 
+
+-
+
 # Lists
 
 - Enum.shuffle
@@ -72,3 +75,7 @@ iex> colors.primary
 
 - key word lists
 - unlike maps, can have many items with the same key.
+
+# Identicons
+
+- hashing a string
