@@ -63,3 +63,43 @@
     - make cloning easy via factory
   - explicit copying becomes difficult given complex class trees
   - copy through serialization JSON.parse(JSON.stringify(myClassInstance)) // only copies data
+  - to implement
+    - 1. partially construct an object and store it somewhere
+    - 2. deep copy the prototype
+    - 3. costumize the resulting instance
+    - 4. a factory provides a convenient API for using prototypes
+
+- `Singleton`
+  - some people (Erich Gamma thinks it's a design smell)
+  - for some components it only makes sense to have one in the system
+  - for example: when the constructor is expensive and doesn't need to be done multiple times.
+  - want to prevent anyone creating additional copies
+  - implementation
+    - 1. if this.constructor.instance return instance else create instance
+    - `Monostate` using getters and setters means that each instance is shared (??) didn't know that. not recommended
+  - use dependencies in the contructor to avoid the dependency inversion principle
+
+- `Adapter`
+  - when you are constrained to use a particular API
+  - for example when you have an API that only draws points, but need to generate lines
+  - you need some translation layer (an adapter) that acts like an interface to the API to convert it do have a different behavior i.e. LineToPointAdapter
+
+- `Bridge`
+  - prevents a Cartesian product (wut?) complexity explosion `Cartesian-product duplication`
+  - example: many shape classes and methods of rendering = too many classes = state space explosion
+  - avoid this using a bridge between two hierarchies
+  - e.g. you have 2 heirarchies Renderer and Shape with multiple sub classes of each
+    - instead of making every sub class combination, you use a bridge so each renderer has the same methods for interacting with the different shape classes. This still has problems because you have to make methods for every type of shape.
+    - meaning we don't have many classes - but we do still have many methods
+  - decouple abstraction from implementation
+  - Both can exist as hierarchies
+  - A stronger form of encapsulation
+
+- Composite
+  - Objects use other objects fields/methods through inheritance and composition
+  - `compound objects`
+  - used to treat both single (scalar?) and composite objects uniformly
+  - treating objects and collections of objects in a uniform manner
+  - Use [Symbole.iterator](){return {next: () => ({value: this, done: returned++})}}
+    - to make a single object iterable.
+    - need aggregation to combine classes since there's no composition in js
