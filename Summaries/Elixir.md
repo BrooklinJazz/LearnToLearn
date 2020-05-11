@@ -54,3 +54,11 @@
     |> Cards.deal(size)
   end
 ```
+- refute: can use instead of !=
+- test example
+```
+ test "shuffle _ randomizes deck" do
+  deck = Cards.create_deck
+  refute deck == Cards.shuffle(deck)
+ end
+```
