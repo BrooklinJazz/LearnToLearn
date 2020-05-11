@@ -6,7 +6,8 @@ defmodule Identicon do
   def main(input) do
     input
     |> hash_input
-    |> to_image
+    |> hash_to_image
+    |> pick_color
   end
 
   @doc """
@@ -18,20 +19,19 @@ defmodule Identicon do
 
   iex> Identicon.hash_input("banana")
   [114, 179, 2, 191, 41, 122, 34, 138, 117, 115, 1, 35, 239, 239, 124, 65]
-
-  iex> Identicon.hash_input("orange")
-  [254, 1, 214, 122, 0, 45, 250, 15, 58, 192, 132, 41, 129, 66, 236, 205]
-  iex> Identicon.hash_input("orange")
-  [254, 1, 214, 122, 0, 45, 250, 15, 58, 192, 132, 41, 129, 66, 236, 205]
   """
   def hash_input(input) do
     hex = :crypto.hash(:md5, input)
     |> :binary.bin_to_list()
   end
 
-  def to_image(hex) do
+  def hash_to_image(hex) do
     %Identicon.Image{hex: hex}
   end
 
+  def pick_color(image) do
+    %Identicon.Image{hex: [r, g, b | _tail]} = image
+    [r,g, b]
+  end
 
 end

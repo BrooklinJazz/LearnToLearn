@@ -94,3 +94,5 @@ iex> %Identicon.Image{hex: nil}
 ```
 
 - only props you define can exist, unlike a map
+- if you know the props you want to use it's convention to use a Struct rather than map
+- 
