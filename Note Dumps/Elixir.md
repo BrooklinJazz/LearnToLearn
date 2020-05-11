@@ -79,3 +79,17 @@ iex> colors.primary
 # Identicons
 
 - hashing a string
+
+- Structs
+  - just like maps
+  - can be assigned default values
+
+```
+defmodule Identicon.Image do
+  defstruct hex: nil
+end
+
+iex> %Identicon.Image{hex: nil}
+%Identicon.Image{hex: nil}
+```
+

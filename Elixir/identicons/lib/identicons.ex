@@ -1,4 +1,4 @@
-defmodule Identicons do
+defmodule Identicon do
   @moduledoc """
   Documentation for `Identicons`.
   """
@@ -27,4 +27,6 @@ defmodule Identicons do
     :crypto.hash(:md5, input)
     |> :binary.bin_to_list()
   end
+
+
 end
