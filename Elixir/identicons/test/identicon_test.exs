@@ -1,4 +1,4 @@
 defmodule IdenticonTest do
   use ExUnit.Case
-  doctest Identicons
+  doctest Identicon
 end

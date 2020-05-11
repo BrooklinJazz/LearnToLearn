@@ -93,3 +93,4 @@ iex> %Identicon.Image{hex: nil}
 %Identicon.Image{hex: nil}
 ```
 
+- only props you define can exist, unlike a map

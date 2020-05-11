@@ -1,11 +1,12 @@
 defmodule Identicon do
   @moduledoc """
-  Documentation for `Identicons`.
+  Documentation for `Identicon`.
   """
 
   def main(input) do
     input
     |> hash_input
+    |> to_image
   end
 
   @doc """
@@ -15,17 +16,21 @@ defmodule Identicon do
 
   # Examples
 
-  iex> Identicons.hash_input("banana")
+  iex> Identicon.hash_input("banana")
   [114, 179, 2, 191, 41, 122, 34, 138, 117, 115, 1, 35, 239, 239, 124, 65]
 
-  iex> Identicons.hash_input("orange")
+  iex> Identicon.hash_input("orange")
   [254, 1, 214, 122, 0, 45, 250, 15, 58, 192, 132, 41, 129, 66, 236, 205]
-  iex> Identicons.hash_input("orange")
+  iex> Identicon.hash_input("orange")
   [254, 1, 214, 122, 0, 45, 250, 15, 58, 192, 132, 41, 129, 66, 236, 205]
   """
   def hash_input(input) do
-    :crypto.hash(:md5, input)
+    hex = :crypto.hash(:md5, input)
     |> :binary.bin_to_list()
+  end
+
+  def to_image(hex) do
+    %Identicon.Image{hex: hex}
   end
 
 
