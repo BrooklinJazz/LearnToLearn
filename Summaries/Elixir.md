@@ -10,6 +10,7 @@
 - tuples: keyname lists {"el1", "el2"}
 - lists: ["1", "2"]
   - keyword lists: [{:primary: "red"}, {:secondary: "blue"}]
+    - returns [primary: "red", secondary: "blue"]
 - maps: like objects %{key: value}
   - can use obj syntax map.key
 - atoms :my_atom
