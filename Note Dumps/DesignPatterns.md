@@ -96,10 +96,41 @@
   - A stronger form of encapsulation
 
 - Composite
+  - used to treat both single (scalar?) and composite objects uniformly
   - Objects use other objects fields/methods through inheritance and composition
   - `compound objects`
-  - used to treat both single (scalar?) and composite objects uniformly
   - treating objects and collections of objects in a uniform manner
   - Use [Symbole.iterator](){return {next: () => ({value: this, done: returned++})}}
     - to make a single object iterable.
     - need aggregation to combine classes since there's no composition in js
+
+- `Decorator`
+  - used when we want to augment existing functionality
+    - do not want to rewrite or alter existing code (Open/Close)
+    - want to keep new functionality separate (Single Responsibility)
+    - Need to be able to interact with existing structures.
+  - A decorator keeps the reference to the decorated objects
+  - Adds utility fields and methods to augment the objects features
+  - May or may not forward calls to the underlying object
+
+I didn't like the decorator implementation, but it seemed a lot like a HOC where we wrap the class with something else that gives it more functionality/properties. However in this case you also extend the base class for some reasons. Honestly just a bad code example and I need to find something better.
+
+
+- Facade
+
+- Flyweight
+- Proxy
+- Chain of Responsibility
+- Command
+- Interpreter
+- Iterator
+- Mediator
+- Memento
+- Observer
+- State
+- Strategy
+- Template Method
+- Visitor
+
+# Todo
+- write al of the use cases inside a different formatting for the above.
